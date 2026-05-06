@@ -1,0 +1,11 @@
+services:
+  cnr-live-h5:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cnr-live-h5:latest
+    container_name: cnr-live-h5
+    restart: unless-stopped
+    user: "0:0"
+    ports:
+      - "0.0.0.0:3000:80"
